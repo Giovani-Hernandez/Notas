@@ -141,5 +141,186 @@
         </body>
     </table>
 
+    <!-- 
+    =======================================================================
+           Vinuculos HTML
+    
+    Crear marcadores en HTML
+    
+    Los marcadores
+-->
+<br>
+<br>
+<br>
+<hr>
+<a href="#parrafo3">Parrafo 3</a>
+<br>
+<a href="/html/login.html">Inicia sesión</a>
+<br>
+<a href="/html/login.html#p4">Mira el capitulo 4 del Login</a>
+<P id="parrafo1">
+    P1.Loren ipsum dolor sit amet consectetur adipisicing elit. Animi sint officia maxime! Libero distinctio itaque nulla voluptates quam rem, cupiditate tenetur ducimus, ipsam suscipit saepe maxime, maiores mesciumt eum obcaecati
+</P>
+<br>
+<p id="parrafo2">
+    P2.Aunque la frase no tiene sentido, tiene una larga historia. Durante varios siglos, los tipógrafos han utilizado esta frase para mostrar las características más distintivas de sus fuentes. Se utiliza porque las letras que contiene y el espaciado entre caracteres de esas combinaciones revelan de la mejor forma posible el espesor, el diseño y otras características importantes del tipo de letra.
+</p>
+<br>
+<p id="parrafo3">
+    P3.Un ejemplar de 1994 de la revista "Before & After" asocia "Lorem ipsum ..." a una versión latina revuelta de un pasaje de de Finibus Bonorum et Malorum, un tratado sobre la teoría de la ética escrito por Cicerón en el año 45 A.C. El pasaje "Lorem ipsum..." se ha extraído del texto que dice "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...", que se traduciría como "No hay nadie que ame el dolor mismo, que lo busque y lo quiera tener, simplemente porque es el dolor...".
+</p>
+<hr>
+<br>
+<!--====================================================================
+                       Formularios de HTML
+    
+    Elemento que se encarga de recopilar información del usuario  para enviarlo a un servidor para su procesamiento.
+
+    -------Elementos de un formulario-----------
+    <form></form> Se utiliza para crear un formulario HTML para la entrada de un usuario.
+
+    Diferentes tipos de entrada como campos de texto, casillas de verificación, botones de opción, botones de envío, etc.
+-->
+
+<form>
+    <label for="user">Nombre de usuario</label>
+    <input type="text" id="user" name="user">
+</form>
+<!-- ----Elemento <label>
+    Define una etiqueta para formularios y es útil para los usuarios de lectores de pantalla. Cuando el usuario hace click en el tecto dentro del elemento <label> alterna el botón de opción/casilla de verificación.
+        -for:debe ser igial al atributo id del elemento <input> para unirlos o vinvcularlos.
+---------Elemento <input>
+    Es el elemento de formulario más usado y se puede mostrar según el aributo "type"
+    Tipos de input (type):
+       -text. Permite introducir texto
+       -password. Permite introducir una contraseña y agregar asteriscos o puntos para ocultar la información
+        -->
+    <form>
+        <label for="password">Contraseña</label>
+        <input type="password" id="password" name="password" >
+        <br>
+        <br>
+<!--number. Tipo numérico para elegir números. Se pueden definir números mínimos (min="número") o números máximos (max="múmero")-->
+        <label for="edad">Escribe tu edad</label>
+        <input type="number" id="edad" name="edad" min="20" max="30" placeholder="Minimo 10 y Maximo 30 años">
+        <br>
+        <br>
+        <br>
+        <!--email. Solicita el uso de la arroba @ para escribir-->
+        <labe for="correo_elect">Escribe tu correo electrónico</labe>
+        <input type="email" id="correo_elect" name="correo_elect">
+        <br>
+        <br>
+        <!--textarea Si queremos un cuadro de texto para realizar comentarios se utiliza la etiqueta textarea-->
+
+        <label for="comentarios">Escribe un comentario</label>
+        <textarea name="comentarios" id="comentarios" placeholder="Maximo 200 palabras"></textarea>
+        <br>
+        <br>
+        <!-- date. Despliega un calendario para seleccionar día, mes y año en dormato (dd-mm-aaaa)-->
+        <label for="nacimiento">Selecciona tu fecha de nacimiento</label>
+        <input type="date" id="nacimiento" name="nacimiento">
+        <br>
+        <br>
+        <!--radio. Define un botón de opción. Permite al usuario seleccionar solamente UNA opción de un número de opciones-->
+        <P>Elige tu lenguaje de programación fav</P>
+        <input type="radio" id="java" name="lenguaje_fav" value="java">
+        <label for="java">JAVA</label>
+        <input type="radio" id="javascript" name="lenguaje_fav" value="javascript">
+        <label for="javascript">JAVASCRIPT</label><br>
+        <input type="radio" id="python" name="lenguaje_fav" value="python">
+        <label for="phyton">PYTHON</label>
+        <br>
+        <br>
+        <!--checkbox. Define una casilla de verificación, donde el usuario puede seleccionar Cero O más opciones de un número limitado de opciones-->
+        <p>Seleciona os idiomas que hablas</p>
+        <input type="checkbox" id="idioma1" name="idioma1" value="english">
+        <label for="idioma1">Ingles</label>
+        <br>
+        <input type="checkbox" id="idioma2" name="idioma2" value="spanish">
+        <label for="idioma2">Español</label>
+        <br>
+        <input type="checkbox" id="idioma3" name="idioma3" value="french">
+        <label for="idioma3">Francés</label>
+        <br>
+        <br>
+        <!--file. Es un cmpo de selección de archivos y un boton "Examinar" que permite cargar archivos-->
+        <label for="miArchivo">Agragar archivo en formato PDF</labele>
+        <input type="file" id="miArchivo" name="miArchivo">
+        <br>
+        <br>
+    
+        <!--Experimentando con documentacion de w3schools-range.-->
+        <label for="vol">Volumen (entre 0 y 50)</label>
+        <input type="range" id="vol" name="vol" min="0" max="50">
+    </form>
+
+    <!--======================== Botones =========================
+    Permite controlar el envío de información del usuario. El type="submit" envía al servidor lo que se escribe y el type="reset" permite resetear la información contenida en el formulario.
+    -->
+
+    <!--Reto: diseñar un formulario de registro para una página de videojuegos. ¿Qué necesitamos?
+    Todo los campos deben de se obligatorios
+        -Nombre "text"
+        -Apellido "text"
+        -Nombre de usuario "text"
+        -Correo "email"
+        -Edad (minimo 18 años) "number"
+        -Contraseña  "password"
+        -Botón con nombre "Registrarse" 
+        -Botón que diga "Limpiar formulario"
+
+
+    -->
+    <br>
+    <br>
+    <h1>Epic Game</h1>
+    <!--Cuando el atributo action esta en blanco, la solicitud de envio del formulario se enviara a la misma pagia. Es decir, cuando se envie el formulario, los datos se enviaran al mismo URL.
+    Para hacer que los datos del formulario se envien a una URL -->
+    <form id="epicgame" action="/action_page.php" method="post">
+    <label for="user">Nombre</label>
+    <input type="text" id="nombre" name="user" required>
+    <br>
+    <label for="user">Apellido</label>
+    <input type="text" id="apellido" name="user" required>
+    <br>
+    <label for="user">Nombre de Usuario</label>
+    <input type="text" id="nombredeusuario" name="user" required>
+    <br>
+    <labe for="correo_elect">Escribe tu correo electrónico</labe>
+    <input type="email" id="correoelect" name="correo_elect" required>
+    <br>
+    <label for="edad">Escribe tu edad</label>
+    <input type="number" id="edadepic" name="edad" min="18" placeholder="Minimo 18 años" required>
+    <br>
+    <label for="password">Contraseña</label>
+    <input type="password" id="password" name="password" required>
+    <br>
+    <button type="submit">Registrarse</button>
+    <button type="reset">Limpiar Formulario</button>
+    </form>
+
+    <!--******************Botón enviar*******************
+    type="submit" define un boton para enviar los datos del formulario a un controlador de formulario. El controlador de formulario suele ser un archivo con script para procesar los datos de entrada.
+    El controlador de formulario se especifica en el atributo action del formulario
+      -->
+
+      <h4>Inicia de sesión</h4>
+      <form>
+
+
+
+
+
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
 </body>
 </html>
+
+
+

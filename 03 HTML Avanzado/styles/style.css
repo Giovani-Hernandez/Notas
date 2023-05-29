@@ -3,11 +3,12 @@ table, th,td{
     border-collapse:collapse;        
 }
 
-p{
+/* p{
     font-size: 30px;
     margin-bottom: 3px;
     font-weight: bold;
-}
+ } */
+
 
 table{
     width: 550px;
@@ -37,4 +38,8 @@ caption{
 }
 td{
     text-align: center;
+}
+
+#epicgame{
+    margin: auto;
 }
