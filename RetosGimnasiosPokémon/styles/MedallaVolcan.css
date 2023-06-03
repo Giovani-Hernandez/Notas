@@ -1,0 +1,57 @@
+.boton {
+  position: fixed;
+  top: 10px;
+  left: 30px;
+  padding: 10px 20px;
+  background-color: #050505;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 30px;
+}  
+body {
+  font-family: "Arial", sans-serif;  
+  text-align: center;
+  background-color: #7e7b7b;
+}
+h1 {
+  font-size: 38px;
+  margin-bottom: 50px;
+}
+h2 {
+  font-size: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.imagen {
+  width: 200px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+p {
+  font-size: 20px;
+  margin-bottom: 2px;
+}
+ul.discografia {
+  padding: 0;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+ul.discografia li {
+  margin-bottom: 5px;  
+}
+div.enlaces {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div.enlaces a {
+  margin-right: 10px;
+  font-size: 20px;
+  text-decoration: none;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 20px;
+  background-color: #080808;
+}
+
