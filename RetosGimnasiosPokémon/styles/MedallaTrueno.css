@@ -32,3 +32,11 @@ li {
   margin-bottom: 15px;
   font-size: 19px;
 }
+.container{
+  display: flex;
+  flex-direction:row;
+}
+.imagen{
+  margin-top: 200px;
+  margin-left: 100px;
+}
