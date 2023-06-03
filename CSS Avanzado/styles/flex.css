@@ -1,0 +1,33 @@
+
+.flex{
+    height: 400px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* justify-content: center; */
+    /* justify-content: center; */
+    /* justify-content: center; */
+    
+    /* flex-direction: column; indica si vamor a trabajar con columnas, lo fuerza a ahacerlo*/ 
+    flex-wrap: wrap; 
+
+    /*flex-flow: column wrap;      hace lo mismo que ls dos comandos de arriba*/
+
+    /* flex-wrap: nowrap; */
+    /* flex-wrap: wrap-reverse; */
+}
+
+
+.flex > div {
+    width: 100px;
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 20px;
+    background-color: var(--primary);
+    border:3px solid var(--info);
+    
+}
+
+#div7 {
+    order: 1;
+}

@@ -1,0 +1,13 @@
+/* Fuerza los parrafos a estar en una misma linea */
+.inline {
+    display: inline;
+    font-size: 1.5rem;
+}
+/* Fuerza a separar a los parrafos */
+.block {
+    display:block;
+    }
+/* No permite que se renderice el texto, por ende no aparece en la pantalla */
+.none{
+    display: none;
+}
