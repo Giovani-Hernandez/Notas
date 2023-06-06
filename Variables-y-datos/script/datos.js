@@ -93,6 +93,35 @@ var condicion10 = Boolean(34 > 1);
 
 const pi = 3.1416;pi
 
+//////////////////////////////////////////////////////////////////////////////////////////7
+
+//------------------------- Arrays y objet os------------------------------
+
+/*
+Array, también conocido como Arreglo, es un tipo de dato que pertenece a JS, en el cual almacena una colección de elementos de maner ordenada
+
+Primer elemento = indice 0.
+Hasta n cantidad de indices.
+*/
+
+var ejemploDelArray =["Saludis", "Que onda", "Que hay", "Buenos días"];
+var otroArray = [34,"Que onda",564,117,6,321];
+
+/*
+Objetos, los encontramos como Object
+Son tipos de dato similares a ls Arrays, sin 
+
+key=llave
+value=valor
+*/
+
+var ejemploDeObjeto = {
+    nombre:"Giovani",
+    apellido: "Hernández",
+    edad: 22, 
+    esEstudiante: true,
+}
+
 
 
 
