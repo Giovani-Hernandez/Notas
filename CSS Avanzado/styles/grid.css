@@ -9,7 +9,7 @@
     /* grid-template-rows: auto auto auto; */
 
     height: 400px;
-    align-content:center;
+    align-content:center;/*poner al centro en forma vertical*/  
     justify-content:center; /*poner al centro en forma horizintal*/ 
 }
 

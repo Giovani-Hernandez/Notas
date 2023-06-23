@@ -155,7 +155,7 @@ if (hora >= 6 && hora <= 12) {
 // ====================Sentencias anidadas==================
 // Instrucciones: crear un programa para determinar si es mayor de edad. Si es mayor de edad y tiene menos de 65 años, catalogarlo como adulto, si tiene más de 65 años catalogarlo como adulto mayor
 
-let edadGiovani = 14;
+let edadGiovani = 26;
 
 if (edadGiovani >= 18) {
   if (edadGiovani < 65) {
