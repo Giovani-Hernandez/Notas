@@ -1,29 +1,28 @@
-import { useEffect } from "react";
-import { Route, Routes } from "react-router-dom";
-import Apod from "./Components/Apod/Apod";
-import Astros from "./Components/Astros/Astros";
-import Navbar from "./Components/Navbar/Navbar";
-import Main from "./Components/Main/Main";
-import "./App.css";
+import {useEffect} from 'react';
+import { Route, Routes } from 'react-router-dom';
+import Astros from './Components/Astros/Astros';
+import Navbar from './Components/Navbar/Navbar';
+import Main from './Components/Main/Main';
+import './App.css'
 
 // Constante de login
 const isLogged = true;
 
 const userData = {
-  name: "Giovani",
-  age: "26",
-};
+  name: 'Zabdiel',
+  age: '25'
+}
 
 const links = [
   {
-    name: "ASTROS",
-    link: "astros",
+    "name": 'ASTROS',
+    "link": 'astros'
   },
   {
-    name: "APOD",
-    link: "apod",
-  },
-];
+    "name": 'APOD',
+    "link": 'apod'
+  }
+]
 
 // Navbar ------------
 
@@ -32,21 +31,30 @@ const links = [
 // APOD --- ruta: /apod
 
 function App() {
+  
   useEffect(() => {
-    localStorage.setItem("login", JSON.stringify(isLogged));
+    localStorage.setItem('login', JSON.stringify(isLogged))
   }, [isLogged]);
-
+  
   return (
     <>
-      <Navbar links={links} isLogged={JSON.parse(localStorage.login)} />
+      <Navbar
+        links={links}
+        isLogged={JSON.parse(localStorage.login)}
+      />
 
       <Routes>
-        <Route path="/apod" element={<Apod />} />
-        <Route path="/" element={<Main {...userData} />} />
-        <Route path="/astros" element={<Astros />} />
+        <Route
+          path='/'
+          element={<Main {...userData} />}
+          />
+        <Route
+          path='/astros'
+          element={<Astros />}
+        />
       </Routes>
     </>
-  );
+  )
 }
 
-export default App;
+export default App

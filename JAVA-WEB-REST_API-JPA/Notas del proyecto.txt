@@ -1,0 +1,98 @@
+Notas de JAVA REST API y JPA
+
+Sistema de admin para una libreria
+- Implementaremos relaciones 1:1, 1:N, N:M
+- 4 Entidades
+
+Config
+1. Base de datos
+- Ingles
+- No camelCase -> snake_case
+- Entidades = User, Book, Author, Genre
+
+- Tablas pivote sin PK
+- Ids -> ids descriptivos para cada entidad: User -> user_id, Books -> book_id, etc
+
+
+2. API
+- Version de spring mas antigua disponible (2.7.14v)
+- Version de JAVA 17
+
+2.1 Initializr
+- Gradle - Groovy,
+- Java,
+- Spring 2.7.14v (La mas antigua disponible)
+- com.bookstore
+- JAR
+- Java 17v
+- Dependencias: 
+	- Spring Web
+	- Spring Data JPA
+	- MySQL Driver
+
+2.2 Importacion
+- Generar proyecto con Initializr
+- Descomprimir
+- !Importante verificar que no haya carpetas anidadas
+	- Mover carpeta al workspace
+- En eclipse, importar proyecto existente de Gradle.
+	- Seleccionar el proyecto dentro del workspace
+	- Esperar a que se construya
+
+2.3 build.gradle
+- Verificar version Spring
+- Version del proyecto, ej: '0.0.1-SNAPSHOT'
+- Version Java
+- Dependencias
+
+3. Estructura de la API
+- Todos los paquetes para nuestro MVC van a ir dentro del paquete principal/inicial donde se encuentra nuestro archivo Application.java
+- Controller, Entity/Model, Repository, Service
+
+4. Creacion de clases
+- Ids PK, AI, NN, Se deben declarar como tipo de dato Long
+- Constructor de todos los atributos + constructor vacio para JPA
+
+4.1 Anotaciones para entidades
+- @Id, @GeneratedValue, @Column para atributos PK
+- @Column(nullable=false) para atributos NOT NULL en la BD
+- @Column(name="column_name", nullable=false) <- opcional pero recomendado
+- Constructor con atributos es opcional
+- Constructor vacio ?requerido
+- Relaciones
+	-Definir tipo de relacion @ManyToOne
+	-Definir columna con FK @JoinColumn(name="column_name")
+	-Definir entidad que se relaciona private Entity entity
+- Getters y setters
+- Revisar/comprobar relaciones y sus anotaciones cuando hay N:M
+
+5. Creacion de Repositorios
+- Interfaces que heredan de JpaRepository<Entidad, Long>
+
+6. Creacion de Servicios
+- Crear una inyeccion de dependencia desde nuestro EntityRepository
+- Todos los metodos los obtendremos desde JpaRepository;
+
+7. Creacion de controllers
+- Declaramos Mapping para la entidad -> @RequestMapping(path="/api/entidad")
+- @RestController
+- Autowired para obtener datos de entityService
+- @Mapping para cada operacion CRUD
+- @RequestBody para POST PUT
+- Metodos en POST cuando tenemos relaciones N:M y llaves foraneas -> EntityService
+
+8. Conexion con la BD
+- Configuracion de desarrollo, No produccion
+- application.properties -> src/main/resources
+
+-----
+spring.datasource.url= jdbc:mysql://localhost:3306/bookstore
+
+spring.datasource.username=root
+
+spring.datasource.password=Pa$$w0rd
+
+spring.jpa.hibernate.ddl-auto=update
+----
+
+8.1 Encender servicio de MySQL y asegurarse de que esté disponible la BD

@@ -1,13 +1,12 @@
-/* Modulo de importación. Puedo importar los módulos externos mediante la palabra reservada
-parImpar()45678621;
+/* Módulo de importación. Puedo importar los módulos externos mediante la palabra reservada require('')
+
 */
 
 const parImpar = require('./parImpar.js');
 
-parImpar(34567);
-parImpar(2560);
-parImpar(45678);
-parImpar(3433434343434);
+parImpar(45678621);
+parImpar(821786);
+parImpar(365824);
 
-//Para bublicar el paquete de manera publica usamos el comando
-//npm publish --access=public
+//Para publicar el package de manera pública utilizamos el comando
+//$ npm publish --access=public
